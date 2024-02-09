@@ -26,12 +26,15 @@ else
   echo "Файл requirements.txt не найден. Пропуск установки зависимостей."
 fi
 
+# Создание папки data, если она не существует
+mkdir -p data
+
 # Скачивание данных
 curl -L $(yadisk-direct https://disk.yandex.ru/d/Ihh18yf4807QPA) -o data.zip
-curl -L $(https://disk.yandex.ru/d/OfkV_Ar_1jCIAA) -o models.zip
+curl -L $(yadisk-direct https://disk.yandex.ru/d/OfkV_Ar_1jCIAA) -o models.zip
 
 # Распаковка данных
-unzip data.zip
+unzip data.zip -d data
 unzip models.zip
 
 # Удаление архива
