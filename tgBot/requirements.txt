@@ -1,0 +1,8 @@
+scikit-learn
+aiogram
+typing-extensions==4.7.1
+wldhx.yadisk-direct
+nltk
+pandarallel
+pymorphy2
+pandas
