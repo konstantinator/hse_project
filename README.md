@@ -12,7 +12,7 @@
     ./setup_project.sh
     ```
     скрипт установит все необходимые библиотеки для запуска telegram бота
-4. Возможно Вам придется сменить среду выполнения: Перейдите в `Pycharm` > `Settings` > `Project: tgBot` > `Python Interpreter`> `Add Interpreter`> `Existing` > `<путь к проекту>/env/bin/python`
+4. Возможно Вам придется сменить среду выполнения: Перейдите в `Pycharm` > `Settings` > `Project: tgBot` > `Python Interpreter`> `Add Interpreter`> `Existing` и укажите этот путь: `<путь к проекту>/env/bin/python`
 
 ### информация о датасете
 
