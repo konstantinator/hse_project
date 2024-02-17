@@ -1,4 +1,8 @@
-from keyboards/keyboard_for_start.py import get_keyBoard_for_start
+from aiogram import Router
+from aiogram.filters.command import Command
+from aiogram.types import Message, ReplyKeyboardRemove
+from bot_graph import BotStates
+from aiogram.fsm.context import FSMContext
 
 
 router = Router()
