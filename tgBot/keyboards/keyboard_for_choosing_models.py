@@ -1,3 +1,7 @@
+from aiogram.utils.keyboard import ReplyKeyboardBuilder
+from aiogram.types import ReplyKeyboardMarkup
+
+
 def keyboard_for_choosing_models() -> ReplyKeyboardMarkup:
     kb = ReplyKeyboardBuilder()
     kb.button(text="Логистическая регрессия")

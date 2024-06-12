@@ -1,3 +1,7 @@
+from aiogram.utils.keyboard import ReplyKeyboardBuilder
+from aiogram.types import ReplyKeyboardMarkup
+
+
 def keyboard_for_main_menu() -> ReplyKeyboardMarkup:
     kb = ReplyKeyboardBuilder()
     kb.button(text="Отнеси мою новость к нужной теме")

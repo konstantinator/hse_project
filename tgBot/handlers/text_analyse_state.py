@@ -1,6 +1,6 @@
 from aiogram.types import Message
 from aiogram.fsm.context import FSMContext
-from handlers.start import router
+from handlers.start_state import router
 from bot_graph import BotStates
 from keyboards.keyBoard_for_prob import keyBoard_for_prob
 from keyboards.keyboard_for_leaf_vertex import keyboard_for_leaf_vertex
@@ -37,7 +37,7 @@ async def log_reg_answer(message: Message, state: FSMContext):
 
 # Вывод результата Similar_text
 @router.message(BotStates.sim_state)
-async def raandom_forest_answer(message: Message, state: FSMContext):
+async def raandom_forest_answer(message: Message):
     await message.answer(
         text=get_sim_text(message.text.lower()),
         reply_markup=keyboard_for_leaf_vertex()

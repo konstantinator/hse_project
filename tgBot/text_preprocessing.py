@@ -1,6 +1,7 @@
 import re
 from pymorphy2 import MorphAnalyzer
 from sklearn.metrics.pairwise import cosine_similarity
+from run_bot import enc_full, df_base, stopwords_ru, vectors
 
 
 # Поиск похожего текста
@@ -19,10 +20,3 @@ morph = MorphAnalyzer()
 def preprocess(text):
     return ' '.join(
         [morph.normal_forms(i)[0] for i in re.sub(patterns, ' ', text.lower()).split() if i not in stopwords_ru])
-
-
-def predict(example):
-    title_body = example
-    title_body = preprocess(title_body)
-    X_pred = enc_full.transform([title_body])
-    return dec[lr.predict(X_pred)[0]]

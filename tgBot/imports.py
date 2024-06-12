@@ -45,5 +45,6 @@ from aiogram.filters import Command, StateFilter
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.fsm.state import default_state
-import emoji
 import aiofiles
+from handlers.start_state import router
+from bot_graph import BotStates

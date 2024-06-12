@@ -4,5 +4,11 @@ typing-extensions==4.7.1
 wldhx.yadisk-direct
 nltk
 pandarallel
-pymorphy2
 pandas
+matplotlib
+networkx
+setuptools
+wheel
+pymorphy2==0.9
+torch==2.3.1
+fasttext==0.9.3

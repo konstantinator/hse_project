@@ -1,3 +1,8 @@
+import networkx as nx
+import matplotlib.pyplot as plt
+from aiogram.fsm.state import StatesGroup, State
+
+
 class BotStates(StatesGroup):
     registration_state = State()
     main_menu_state = State()           # Главное меню
@@ -9,8 +14,6 @@ class BotStates(StatesGroup):
     sim_state = State()                 # Вставка новости для поиска похожей
     rate_state = State()                # Вставка новости для поиска подходящей
 
-import networkx as nx
-import matplotlib.pyplot as plt
 
 G = nx.DiGraph()
 
@@ -55,6 +58,7 @@ node_to_state = {
     "Оценка бота": BotStates.rate_state
 }
 
+
 class GraphNavigator:
     def __init__(self, graph, node):
         self.graph = graph
@@ -75,15 +79,3 @@ class GraphNavigator:
 
     def get_current_node(self):
         return self.current_node
-
-node_to_sate = {
-    "Регистрация": BotStates.registration_state,
-    "Главное меню": BotStates.main_menu_state,
-    "Подбери заголовок": BotStates.choosing_model_state,
-    "LogReg": BotStates.logreg_state,
-    "Уверенность logReg": BotStates.lr_prob_state,
-    "RandomForest": BotStates.randomforest_state,
-    "Уверенность randomForest": BotStates.rf_prob_state,
-    "Поиск похожего": BotStates.sim_state,
-    "Оценка приложения": BotStates.rate_state
-}
